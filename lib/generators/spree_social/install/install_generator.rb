@@ -8,8 +8,8 @@ module SpreeSocial
       end
 
       def add_stylesheets
-        inject_into_file "app/assets/stylesheets/store/all.css", " *= require store/spree_social\n", :before => /\*\//, :verbose => true
-        inject_into_file "app/assets/stylesheets/admin/all.css", " *= require admin/spree_social\n", :before => /\*\//, :verbose => true
+        inject_into_file "app/assets/stylesheets/store/all.css.sass", " *= require store/spree_social\n", :before => /\*\//, :verbose => true
+        inject_into_file "app/assets/stylesheets/admin/all.css.sass", " *= require admin/spree_social\n", :before => /\*\//, :verbose => true
       end
 
       def add_migrations
