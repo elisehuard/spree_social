@@ -11,7 +11,7 @@ Spree::UserRegistrationsController.class_eval do
     if session[:omniauth]
       @user.apply_omniauth(session[:omniauth])
       @user.valid?
-      redirect_to "/"
+      @user
     end
   end
 end
