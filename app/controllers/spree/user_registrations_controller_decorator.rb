@@ -13,5 +13,6 @@ Spree::UserRegistrationsController.class_eval do
       @user.valid?
       @user
     end
+    @user
   end
 end
