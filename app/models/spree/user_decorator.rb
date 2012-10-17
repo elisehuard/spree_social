@@ -11,6 +11,7 @@ Spree::User.class_eval do
   end
 
   def password_required?
-    (user_authentications.empty? && !encrypted_password.blank?)
+    (user_authentications.empty? && encrypted_password.blank?)
+    false
   end
 end
